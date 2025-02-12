@@ -1,0 +1,142 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #dfe7fd; /* Soft pastel blue */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #1a1a2e; /* Deep navy blue */
+}
+
+.container {
+    text-align: center;
+    background: #f8f9ff; /* Light blue-white */
+    padding: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border-radius: 15px;
+    width: 60%;
+}
+
+h1 {
+    color: #ff4d79; /* Romantic soft pink */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Message box styling */
+.message-box {
+    background: #e3eafc; /* Light blue */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff4d79; /* Pink border */
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #ff4d79; /* Romantic pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e94560; /* Deeper pink */
+}
+
+/* Valentine box */
+.valentine-box {
+    text-align: center;
+}
+
+#yesBtn {
+    background-color: #007bff; /* Romantic blue */
+}
+
+#yesBtn:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+#noBtn {
+    background-color: #333; /* Black */
+    position: relative;
+}
+
+#noBtn:hover {
+    background-color: #666; /* Light black */
+}
+
+.heart {
+    display: inline-block;
+    font-size: 24px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* When hovered, the heart glows and beats */
+.heart:hover {
+    animation: beat 0.5s infinite alternate ease-in-out, glow 0.4s infinite alternate ease-in-out;
+}
+
+/* Heart beating effect */
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Glowing effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #230f5b, 0 0 30px #ee3985;
+    }
+    100% {
+        text-shadow: 0 0 7px #ff1a57, 0 0 20px #e40d4a;
+    }
+}
+
+.heart-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    width: 400px; /* Adjust size */
+    height: 400px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.memory-img {
+    position: absolute;
+    width: 60px; /* Adjust size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+}
+

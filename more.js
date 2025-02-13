@@ -27,50 +27,9 @@ document.getElementById("submitBtn").addEventListener("click", async function ()
 
 // Existing Code (No Change)
 document.getElementById("yesBtn").addEventListener("click", function() {
-    alert("I Love You! ❤️");
-
-    // List of memory images
-    let images = [
-        "images/image1.jpg","images/image2.jpg","images/image3.jpg",
-        "images/image4.jpg","images/image5.jpg","images/image6.jpg",
-        "images/image7.jpg","images/image8.jpg","images/image9.jpg",
-        "images/image10.jpg","images/image11.jpg","images/image12.jpg",
-        "images/image13.jpg","images/image14.jpg","images/image15.jpg",
-        "images/image16.jpg","images/image17.jpg","images/image18.jpg",
-        "images/image19.jpg","images/image20.jpg","images/image21.jpg",
-        "images/image22.jpg","images/image23.jpg","images/image24.jpg",
-        "images/image25.jpg"
-    ];
-
-
-    let heartCoordinates = [
-        [0, -2], [1, -2], [-1, -2], [2, -1], [-2, -1],
-        [3, 0], [-3, 0], [2, 1], [-2, 1], [1, 2],
-        [-1, 2], [0, 3], [1, 3], [-1, 3], [2, 4], 
-        [-2, 4], [3, 5], [-3, 5], [0, 6], [1, 6], 
-        [-1, 6], [0, 7]
-    ];
-
-    let heartContainer = document.createElement("div");
-    heartContainer.classList.add("heart-container");
-
-    images.slice(0, heartCoordinates.length).forEach((src, i) => {
-        let img = document.createElement("img");
-        img.src = src;
-        img.classList.add("memory-img");
-
-        // Set heart-shaped positions
-        let [x, y] = heartCoordinates[i];
-        img.style.transform = `translate(${x * 60}px, ${y * 60}px)`;
-
-        heartContainer.appendChild(img);
-    });
-
-    document.body.appendChild(heartContainer);
-    
-    // Fade-in effect
-    setTimeout(() => heartContainer.style.opacity = "1", 100);
+    window.location.href = "valentine.html"; // Redirect to new page
 });
+
 
 
 let noBtn = document.getElementById("noBtn");
@@ -80,6 +39,18 @@ noBtn.addEventListener("mouseover", function () {
     noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
 });
 
-noBtn.addEventListener("click", function() {
-    alert("Dumbass!");
+document.getElementById("noBtn").addEventListener("click", function() {
+    // Create the stamped text
+    let dumbassStamp = document.createElement("div");
+    dumbassStamp.classList.add("dumbass-stamp");
+    dumbassStamp.innerText = "DUMBASS!"; 
+
+    // Add the stamp to the body
+    document.body.appendChild(dumbassStamp);
+
+    // Remove after 3 seconds
+    setTimeout(() => {
+        dumbassStamp.remove();
+    }, 10000);
 });
+

@@ -128,3 +128,77 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     position: absolute;
 }
+
+.love-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url('images/background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.love-message {
+    font-size: 26px;
+    font-weight: bold;
+    color: #d63384;
+    max-width: 80%;
+
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.dumbass-stamp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    background: none;
+    color: red;
+    font-size: 80px;
+    font-weight: bold;
+    padding: 20px;
+    border: 10px solid red;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+    opacity: 1;
+    animation: fadeOut 2.5s forwards;
+}
+
+/* Fading out animation */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+
+.love-message {
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    text-align: center;
+    background-color: #fff;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.gif-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
